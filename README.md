@@ -23,4 +23,6 @@ Things you may want to cover:
 
 * ...
 # Just Keep Building
-Your app description, here.
+![Build Status](https://codeship.com/projects/just_keep_building/status?branch=master)
+![Code Climate](https://codeclimate.com/github/Cyril-Jay/just_keep_building.png)
+![Coverage Status](https://coveralls.io/repos/Cyril-Jay/just_keep_building/badge.png)
