@@ -26,4 +26,5 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'listen'
+  gem 'puma'
 end
