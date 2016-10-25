@@ -3,12 +3,13 @@
   <head>
     <title>JustKeepBuilding</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <%= link_to 'Home', home_index_path %>
+    <%= link_to 'New Wall', new_wall_path %>
     <h2> Hello world under constrution </h2>
     <%= yield %>
   </body>
