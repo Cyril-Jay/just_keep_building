@@ -4,11 +4,11 @@ class Wall < ApplicationRecord
   validates :length, presence: true
 
   def square_footage
-    square_footage = @length.to_i * @height.to_i
+    @square_footage = length.to_i * height.to_i
   end
 
   def lenght_in_inches
-    lenght_in_inches = @length.to_i * 12
+    lenght_in_inches = length.to_i * 12
   end
 
   def studs

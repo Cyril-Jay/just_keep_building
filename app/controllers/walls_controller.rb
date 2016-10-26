@@ -22,6 +22,6 @@ end
   end
   private
   def wall_params
-    params.require(:wall).permit(:length, :height)
+    params.require(:wall).permit(:wall_name, :length, :height)
   end
 end
