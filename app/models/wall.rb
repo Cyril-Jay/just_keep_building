@@ -19,4 +19,8 @@ class Wall < ApplicationRecord
     (square_footage/32.to_f).ceil
   end
 
+  def insulation
+    (square_footage/40.to_f).ceil
+  end
+
 end
