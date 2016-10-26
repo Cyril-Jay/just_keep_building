@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(version: 20161025050646) do
   enable_extension "plpgsql"
 
   create_table "walls", force: :cascade do |t|
+    t.string   "wall_name",  null: false
+    t.integer  "height",     null: false
+    t.integer  "length",     null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
