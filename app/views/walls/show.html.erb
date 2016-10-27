@@ -1,8 +1,10 @@
-<p> Wall Specs </p>
-<h2>wall length <%= @wall.height %></h2>
+<p> <%= @wall.wall_name %> Specs </p>
+<h2>wall height <%= @wall.height %></h2>
 <h2>wall length <%= @wall.length %></h2>
 <p> wall footage <%= @wall.square_footage %> </p> <br>
+<h2> Material needed to build <%= @wall.wall_name %></h2>
 <p> <%= @wall.lenght_in_inches %> </p>
 <h1>stud count <%= @wall.studs %></h1>
 <h1>drywall sheets <%= @wall.drywall %></h1>
 <h2>R13 insulation <%= @wall.insulation %></h2>
+<p> ?? <%= @wall.size_selector(@length) %></p>
