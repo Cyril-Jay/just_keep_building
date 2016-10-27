@@ -8,6 +8,8 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'rubocop'
+gem 'devise'
+
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
