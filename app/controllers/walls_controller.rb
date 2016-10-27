@@ -1,15 +1,19 @@
 class WallsController < ApplicationController
+  def index
+    @walls = Wall.all
+  end
+
   def new
     @wall = Wall.new
   end
 
   def create
     @wall = Wall.new(wall_params)
-    # @wall.user = current_user
+    @wall.user = current_user
     if @wall.save
       redirect_to wall_path(@wall)
     else
-      # flash[:notice] = @wall.errors.full_messages.join(", ")
+      flash[:notice] = @wall.errors.full_messages.join(", ")
       render :new
     end
   end
