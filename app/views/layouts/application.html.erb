@@ -3,13 +3,24 @@
   <head>
     <title>JustKeepBuilding</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
     <h2> Hello world under constrution </h2>
+    <ul>
+      <% if user_signed_in? %>
+        <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
+        <li> <%= link_to 'Profile', edit_user_registration_path(current_user) %> </li>
+        <li> <%= link_to 'Project Page', user_path(current_user) %> </li>
+      <% else %>
+        <li><%= link_to 'Sign In', new_user_session_path %>  </li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %>  </li>
+      <% end %>
+    </ul>
+      <p class="notice"> <%= notice %> </p>
+      <p class="alert">  <%= alert %> </p>
     <%= yield %>
   </body>
 </html>
