@@ -1,2 +1,13 @@
-<h1><%= @user.email %></h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @user.email %> Projects</h1>
+<div class = 'walls'>
+  <h2>Wall</h2>
+  <% @walls.each do |wall| %>
+    <div class='indivitual_wall'>
+      <li class='wall_name'> <%= wall.wall_name %> </li>
+      <div class="button">
+        <%= link_to "Update Wall", edit_wall_path(wall), class: 'btn'%>
+      </div>
+      <li class='delete_wall'> <%= link_to "Delete #{wall.wall_name}", wall_path(@user, wall), method: :delete %> </li>
+    </div>
+  <% end %>
+</div>

@@ -1,4 +1,5 @@
 class Wall < ApplicationRecord
+  belongs_to :user
   validates :wall_name, presence: true
   validates :height, presence: true
   validates :length, presence: true
