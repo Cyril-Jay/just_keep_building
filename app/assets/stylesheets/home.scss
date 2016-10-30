@@ -5,11 +5,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 15px;
+  margin: 10px;
   ul {
     list-style: none;
   }
   .left-side li {
     margin: 0 10px;
   }
+}
+
+.welcome-message {
+  text-align: center;
+  font-family: 'handwriting-draft', ;
 }
