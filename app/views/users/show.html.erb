@@ -1,15 +1,23 @@
 <h1> Projects for <%= @user.email %></h1>
-<div class = 'walls'>
-  <h2>Walls</h2>
-  <% @walls.each do |wall| %>
-    <div class='indivitual_wall'>
-      <h2 class='wall_name'> <%= wall.wall_name %> </h2>
-      <div class="edit">
-        <%= link_to "Change #{wall.wall_name}'s specs", edit_wall_path(wall), class: 'btn'%>
+<table class="hover">
+  <thead>
+    <tr>
+      <th width="200">Walls</th>
+      <th width="100"</th>
+      <th width="150">Change Specs</th>
+      <th width="150">Remove Wall</th>
+    </tr>
+  </thead>
+  <tbody>
+      <div class="row">
+        <% @walls.each do |wall| %>
+          <tr>
+            <td><%= wall.wall_name %></td>
+            <td></td>
+            <td><%= link_to "Edit #{wall.wall_name}", edit_wall_path(wall) %></td>
+            <td><%= link_to "Delete #{wall.wall_name}", wall_path(@user, wall), method: :delete %></td>
+          </tr>
+        <% end %>
       </div>
-      <div class='delete_wall'>
-        <%= link_to "Delete #{wall.wall_name}", wall_path(@user, wall), method: :delete, class: 'btn'%>
-      </div>
-    </div>
-  <% end %>
-</div>
+  </tbody>
+</table>
