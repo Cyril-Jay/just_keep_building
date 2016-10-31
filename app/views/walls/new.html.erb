@@ -8,13 +8,15 @@
       </div>
     </div>
     <p>Please put measurments in feet</p>
-    <div class="small-3 columns">
-      <%= f.label :height, 'Wall Height' %>
-      <%= f.number_field :height %>
-    </div>
-    <div class="small-3 columns">
-      <%= f.label :length, 'Wall Length' %>
-      <%= f.number_field :length %>
+    <div class="row">
+      <div class="small-3 columns">
+        <%= f.label :height, 'Wall Height' %>
+        <%= f.number_field :height %>
+      </div>
+      <div class="small-3 columns">
+        <%= f.label :length, 'Wall Length' %>
+        <%= f.number_field :length %>
+      </div>
     </div>
     <div class="action">
       <%= f.submit "Build it" %>
