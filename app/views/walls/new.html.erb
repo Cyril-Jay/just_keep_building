@@ -1,18 +1,20 @@
 <p> New Wall </p>
-<div>
+<div class="wall-form">
   <%= form_for(@wall) do |f| %>
-  <div class="field">
-    <%= f.label :wall_name, 'Wall Name' %>
-    <%= f.text_field :wall_name %>
-  </div>
-    <p>Please put measurments in feet</p>
-    <div class="field">
-      <%= f.label :height, 'Wall Height' %>
-      <%= f.text_field :height %>
+    <div class="row">
+      <div class="medium-6 columns">
+        <%= f.label :wall_name, 'Wall Name' %>
+        <%= f.text_field :wall_name %>
+      </div>
     </div>
-    <div class="field">
+    <p>Please put measurments in feet</p>
+    <div class="small-3 columns">
+      <%= f.label :height, 'Wall Height' %>
+      <%= f.number_field :height %>
+    </div>
+    <div class="small-3 columns">
       <%= f.label :length, 'Wall Length' %>
-      <%= f.text_field :length %>
+      <%= f.number_field :length %>
     </div>
     <div class="action">
       <%= f.submit "Build it" %>
