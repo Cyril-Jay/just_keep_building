@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>JustKeepBuilding</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-  </head>
+<html lang='en'>
+  <div class="row-right-shift">
+    <head>
+      <meta charset='utf-8' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <title><%= content_for?(:title) ? yield(:title) : 'JustKeepBuilding' %></title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag 'application', media: 'all' %>
+      <%= javascript_include_tag 'application' %>
+    </head>
 
-  <body>
-    <div class='menu'>
-      <div class='left-side'>
-        <ul>
-          <li><%= link_to 'Home', home_index_path %></li>
-          <li><%= link_to 'Build New Wall', new_wall_path %></li>
-        </ul>
+    <body>
+      <div data-sticky-container>
+        <div class='top-bar' data-sticky data-options="marginTop:0;" style="width:100%">
+          <div class='top-bar-right'>
+            <div id='responsive-menu'>
+              <div class='right-side-menu'>
+                <ul class='dropdown menu' data-dropdown-menu>
+                  <li>
+                    <strong>Settings</strong>
+                    <ul class='menu vertical'>
+                      <% if user_signed_in? %>
+                      <li> <%= link_to 'Project Page', user_path(current_user) %> </li>
+                      <li> <%= link_to 'Edit Account', edit_user_registration_path(current_user) %> </li>
+                      <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
+                      <% else %>
+                      <li><%= link_to 'Sign In', new_user_session_path %>  </li>
+                      <li><%= link_to 'Sign Up', new_user_registration_path %>  </li>
+                      <% end %>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class='top-bar-title'>
+            <span data-responsive-toggle='responsive-menu' data-hide-for='medium'>
+              <button class='menu-icon dark' type='button' data-toggle></button>
+            </span>
+            <div id='responsive-menu'>
+              <div class='top-bar-left'>
+                <ul class='dropdown menu' data-dropdown-menu>
+                  <li>
+                    <strong>JustKeepBuilding</strong>
+                    <ul class='menu vertical'>
+                      <li><%= link_to 'Home', home_index_path %></li>
+                      <li><%= link_to 'Build New Wall', new_wall_path %></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class='right-side'>
-          <ul>
-            <% if user_signed_in? %>
-            <li> <%= link_to 'Project Page', user_path(current_user) %> </li>
-            <li> <%= link_to 'Edit Account', edit_user_registration_path(current_user) %> </li>
-            <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
-            <% else %>
-            <li><%= link_to 'Sign In', new_user_session_path %>  </li>
-            <li><%= link_to 'Sign Up', new_user_registration_path %>  </li>
-            <% end %>
-        </ul>
+      <div class='info-messages'>
+        <p class="notice"> <%= notice %> </p>
+        <p class="alert">  <%= alert %> </p>
       </div>
-    </div>
-    <div align='center'>
-      <p class="notice"> <%= notice %> </p>
-      <p class="alert">  <%= alert %> </p>
-    </div>
-    <%= yield %>
-  </body>
+      <%= yield %>
+    </body>
+  </div>
 </html>

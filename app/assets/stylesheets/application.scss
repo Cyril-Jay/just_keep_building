@@ -1,1 +1,27 @@
+@import "foundation_and_overrides";
 @import "*";
+
+@font-face {
+    font-family: 'handwriting-draft';
+    src: url('handwriting-draft.woff2') format('woff2'),
+         url('handwriting-draft.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  font-family: 'handwriting-draft', Sans-serif;
+}
+
+.top-bar {
+  color: #ffffff;
+  li {
+    color: #ffffff;
+  }
+}
+body {
+  background-color: #ffb74d;
+}
+.row-right-shift {
+  margin-left: auto;
+}

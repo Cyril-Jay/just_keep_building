@@ -1,13 +1,14 @@
-<div class="wall_specs">
-  <h2> <%= @wall.wall_name %> Specs </h2>
-  <p> wall height <%= @wall.height %> </p>
-  <p> wall length <%= @wall.length %> </p>
-  <p> wall footage <%= @wall.square_footage %> </p>
-</div>
-
-<div class="wall_mats">
-  <h2> Material needed to build <%= @wall.wall_name %> </h2>
-  <p> 2x4: <%= @wall.studs %> studs <p1>
-  <p> Drywall: <%= @wall.drywall %> sheets </p>
-  <p> R13 insulation: <%= @wall.insulation %> rolls </p>
+<div class='wall-full'>
+  <div class="wall-specs">
+    <h2> <%= @wall.wall_name %> Specs </h2>
+    <p> height <%= @wall.height %> </p>
+    <p> length <%= @wall.length %> </p>
+    <p> footage <%= @wall.square_footage %> </p>
+  </div>
+  <div class="wall-mats">
+    <h2> Material needed to build <%= @wall.wall_name %> </h2>
+    <p> 2x4: <%= @wall.studs %> studs <p1>
+    <p> Drywall: <%= @wall.drywall %> sheets </p>
+    <p> R13 insulation: <%= @wall.insulation %> rolls </p>
+  </div>
 </div>

@@ -1,35 +1,43 @@
 <h1>Change wall measurements</h1>
-<div>
+<div class="wall-form">
   <%= form_for(@wall) do |f| %>
-  <div class="field" id='wall_name' value="#{@wall.wall_name}">
-    <%= f.label :wall_name, 'Wall Name' %>
-    <%= f.text_field :wall_name %>
-  </div>
+    <div class="row">
+      <div class="medium-6 columns" id='wall_name' value="#{@wall.wall_name}">
+        <%= f.label :wall_name, 'Wall Name' %>
+        <%= f.text_field :wall_name %>
+      </div>
+    </div>
     <p>Please put measurments in feet</p>
-    <div class="field" id='length' value="#{@wall.height}">
-      <%= f.label :height, 'Wall Height' %>
-      <%= f.text_field :height %>
+    <div class="row">
+      <div class="small-3 columns" id='length' value="#{@wall.height}">
+        <%= f.label :height, 'Wall Height' %>
+        <%= f.number_field :height %>
+      </div>
     </div>
-    <div class="field" id='length' value="#{@wall.length}">
-      <%= f.label :length, 'Wall Length' %>
-      <%= f.text_field :length %>
+    <div class="row">
+      <div class="small-3 columns" id='length' value="#{@wall.length}">
+        <%= f.label :length, 'Wall Length' %>
+        <%= f.number_field :length %>
+      </div>
     </div>
-    <div class="action">
-      <%= f.submit "Change", class: 'btn' %>
+      <div class="action">
+        <%= f.submit "Change" %>
+      </div>
     </div>
   <% end %>
 </div>
 
-<div class="wall_specs">
-  <h2> <%= @wall.wall_name %> Specs </h2>
-  <p> wall height <%= @wall.height %> </p>
-  <p> wall length <%= @wall.length %> </p>
-  <p> wall footage <%= @wall.square_footage %> </p>
-</div>
-
-<div class="wall_mats">
-  <h2> Material needed to build <%= @wall.wall_name %> </h2>
-  <p> 2x4: <%= @wall.studs %> studs <p1>
-  <p> Drywall: <%= @wall.drywall %> sheets </p>
-  <p> R13 insulation: <%= @wall.insulation %> rolls </p>
+<div class='wall-full'>
+  <div class="wall-specs">
+    <h2> <%= @wall.wall_name %> Specs </h2>
+    <p> height <%= @wall.height %> </p>
+    <p> length <%= @wall.length %> </p>
+    <p> footage <%= @wall.square_footage %> </p>
+  </div>
+  <div class="wall-mats">
+    <h2> Material needed to build <%= @wall.wall_name %> </h2>
+    <p> 2x4: <%= @wall.studs %> studs <p1>
+    <p> Drywall: <%= @wall.drywall %> sheets </p>
+    <p> R13 insulation: <%= @wall.insulation %> rolls </p>
+  </div>
 </div>

@@ -1,4 +1,9 @@
-<div class="welcome-message" align='center'>
-  <p> Hello and welcome to Just Keep Building</p>
-  <p> Sign up to get started or click on build to start a new project</p>
+<div class='welcome-message'>
+  <% if user_signed_in? %>
+    <p> Welcome back to Just Keep Building <%= current_user.email %> </p>
+    <p>You can see your old projects <%= link_to 'Here', user_path(current_user) %> or start a <%= link_to 'New One', new_wall_path %> </p>
+  <% else %>
+    <p>Hello, Welcome to Just Keep Building</p>
+    <p> First time here? <%= link_to 'Sign Up', new_user_registration_path %> to get started or <%= link_to 'Sign In', new_user_session_path %> to get building</p>
+  <% end %>
 </div>
