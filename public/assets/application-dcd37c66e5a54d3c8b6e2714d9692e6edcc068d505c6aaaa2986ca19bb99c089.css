@@ -10723,31 +10723,31 @@ table.hover tr:nth-of-type(even):hover {
 }
 
 @font-face {
-  font-family: 'handwriting draft';
-  src: url("/assets/handwriting-draft.woff") format("woff"), url("/assets/handwriting-draft.woff2") format("woff2");
+  font-family: "HandwritingDraft";
+  src: url(/assets/handwriting-draft-1c81df76df801716794caeab5602aeb145b80b31a1c487867d50e0dd1cafd5d1.ttf) format("truetype"), url(/assets/handwriting-draft-38542199492552a1466ce90538c5160814f65c878186661e1f0b5eb8e13ac970.eot?#iefix) format("embedded-opentype"), url(/assets/handwriting-draft-5233cef5a639ccccdb9a2fd6a0d07e71617cdf93bb2cb8fb37fb0995cacd7f8f.svg#handwriting-draft) format("svg"), url(/assets/handwriting-draft-21bf436d4e07f470253bd24f2473199106a7cdd3cfa85df166bd5c57b811f281.woff) format("woff"), url(/assets/handwriting-draft-c95182f2f27a97de281b00e45cbc16e54cea5f7d458a17e15a8099b0c3ee2131.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
 }
-/* line 12, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
+/* line 15, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
 * {
-  font-family: 'handwriting draft', Sans-serif;
+  font-family: "HandwritingDraft", Sans-serif;
 }
 
-/* line 16, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
+/* line 19, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
 .top-bar {
   color: #ffffff;
 }
-/* line 18, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
+/* line 21, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
 .top-bar li {
   color: #ffffff;
 }
 
-/* line 22, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
+/* line 25, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
 body {
   background-color: #ffb74d;
 }
 
-/* line 25, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
+/* line 28, /Users/Cyril_Jay/challenges/just_keep_building/app/assets/stylesheets/application.scss */
 .row-right-shift {
   margin-left: auto;
 }
