@@ -2,15 +2,18 @@
 @import "*";
 
 @font-face {
-  font-family: "handwriting draft";
-  src: font-url("/assets/handwriting-draft.woff") format("woff"),
-       font-url("/assets/handwriting-draft.woff2") format("woff2");
+  font-family: "HandwritingDraft";
+  src:font_url("handwriting-draft.ttf") format("truetype"),
+      font_url("handwriting-draft.eot?#iefix") format("embedded-opentype"),
+      font_url("handwriting-draft.svg#handwriting-draft") format("svg"),
+      font_url("handwriting-draft.woff") format("woff"),
+      font_url("handwriting-draft.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 * {
-  font-family: "handwriting draft", Sans-serif;
+  font-family: "HandwritingDraft", Sans-serif;
 }
 
 .top-bar {
