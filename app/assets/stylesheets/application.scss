@@ -3,11 +3,11 @@
 
 @font-face {
   font-family: "HandwritingDraft";
-  src:font_url("handwriting-draft.ttf") format("truetype"),
-      font_url("handwriting-draft.eot?#iefix") format("embedded-opentype"),
-      font_url("handwriting-draft.svg#handwriting-draft") format("svg"),
-      font_url("handwriting-draft.woff") format("woff"),
-      font_url("handwriting-draft.woff2") format("woff2");
+  src: font-url("handwriting-draft.ttf") format("truetype"),
+       font-url("handwriting-draft.eot?#iefix") format("embedded-opentype"),
+       font-url("handwriting-draft.svg#handwriting-draft") format("svg"),
+       font-url("handwriting-draft.woff") format("woff"),
+       font-url("handwriting-draft.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
