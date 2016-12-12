@@ -23,7 +23,17 @@ feature 'sign up' do
       expect(page).to_not have_content('Sign Out')
     end
 
+    scenario 'user password confirmation does not match' do
+      visit root_path
+      click_link 'Sign Up'
+      fill_in 'Email', with: 'build@gmail.com'
+      fill_in 'Password', with: 'password'
+      fill_in 'Password confirmation', with: 'hammer'
+      click_button 'Sign up'
 
+      expect(page).to have_content('doesn\'t match')
+      expect(page).to_not have_content('Sign Out')
+    end
 
   end
 end
