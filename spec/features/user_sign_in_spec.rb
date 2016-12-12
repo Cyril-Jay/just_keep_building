@@ -13,5 +13,17 @@ feature 'sign up' do
       expect(page).to have_content('Welcome back to Just Keep Building build@gmail.com')
       expect(page).to have_content('Sign Out')
     end
+
+    scenario 'user leaves required field blank' do
+      visit root_path
+      click_link 'Sign Up'
+      click_button 'Sign up'
+
+      expect(page).to have_content('can\'t be blank')
+      expect(page).to_not have_content('Sign Out')
+    end
+
+
+
   end
 end
