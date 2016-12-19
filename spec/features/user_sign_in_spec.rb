@@ -14,5 +14,16 @@ feature 'sign in' do
     expect(page).to have_content('Welcome back!')
   end
 
+  scenario 'a nonexistent email and password is supplied' do
+    visit root_path
+
+    click_link 'Sign In'
+    fill_in 'Email', with: 'nobody@example.com'
+    fill_in 'Password', with: 'wrongpassword'
+
+    expect(page).to have_content('Forgot your password?')
+    expect(page).to_not have_content('Welcome back!')
+    expect(page).to_not have_content('Sign Out')
+  end
   
 end
