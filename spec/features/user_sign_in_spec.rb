@@ -37,5 +37,15 @@ feature 'sign in' do
     expect(page).to have_content('Forgot your password?')
     expect(page).to_not have_content('Sign Out')
   end
+
+  scenario 'an already authenticated user cannot re-sign in' do
+    visit new_user_session_path
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_button 'Log in'
+
+    expect(page).to have_content('Sign Out')
+    expect(page).to_not have_content('Sign In')
+  end
   
 end
