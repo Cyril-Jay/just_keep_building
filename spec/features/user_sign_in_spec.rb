@@ -25,5 +25,17 @@ feature 'sign in' do
     expect(page).to_not have_content('Welcome back!')
     expect(page).to_not have_content('Sign Out')
   end
+
+  scenario 'an existing email with the wrong password is denied access' do
+    visit '/users/sign_in'
+
+    click_link 'Sign In'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: 'dogcatmeowwoof'
+    click_button 'Log in'
+
+    expect(page).to have_content('Forgot your password?')
+    expect(page).to_not have_content('Sign Out')
+  end
   
 end
