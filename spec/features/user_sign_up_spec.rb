@@ -1,5 +1,6 @@
 require 'rails_helper'
 # feature 'sign up' do
+# let!(:user) { FactoryGirl.create(:user) }
 #   context 'As an unauthenticated user, I want to sign up' do
 #     scenario 'user signs up successfully' do
 #
