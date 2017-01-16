@@ -5,25 +5,19 @@
 
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Just keep building is a construction calculator.  Its purpose is to help me learn the many facets of web development and be a useful tool for ordering building materials.
 
-Things you may want to cover:
+[JustKeepBuilding Heroku Link](https://just-keep-building.herokuapp.com/home)
 
-* Ruby version
+##Functionality
+* Allows users to create an Account
+* Users can then create a building project. Currently the only project available is a simple interior wall
+* The user is asked to name the wall(such as "North master bathroom") and input the wall dimensions (height and length)
+* In return the user is given the amount of building materials needed to construct that wall
+* Users can then edit, create new walls, and delete them as desired
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##Technologies
+* Made with Ruby on Rails version 5
+* Devise gem used to handle user authentication
+* Foundation gem used to help with stylization
+* Deployed with Heroku
