@@ -1,7 +1,7 @@
 require 'rails_helper'
 # feature 'sign in' do
 #   context 'as an authenticated user, I want to be able to sign in' do
-#     # let!(:user) { FactoryGirl.create(:user) }
+#     let!(:user) { FactoryGirl.create(:user) }
 #
 #     scenario 'user signs in successfully' do
 #       visit root_path
